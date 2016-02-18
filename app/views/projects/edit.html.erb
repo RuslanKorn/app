@@ -1,0 +1,17 @@
+<h1>Editing project</h1>
+ 
+<%= form_for :project, url: project_path(@project), method: :patch do |f| %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', project_path %>
+<%= link_to 'My Blog', controller: 'projects' %>

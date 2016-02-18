@@ -1,0 +1,62 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+P { 
+    text-align: justify; /* Выравнивание по ширине */
+    color: green; /* Зеленый цвет текста */
+    margin-left: 20px; /* Отступ слева */
+   }
+
+   h1 {
+   text-align: justify; /* Выравнивание по ширине */
+    color: blue; /* Зеленый цвет текста */
+    }
+
+  td {
+  text-align: justify; /* Выравнивание по ширине */
+    color: red; /* Зеленый цвет текста */
+    margin-left: 20px; /* Отступ слева */
+    height:20px;
+  }
+
+  th{
+
+  color: grey; /* Зеленый цвет текста */
+    margin-left: 20px; /* Отступ слева */
+    height:20px;
+  }
+
+  strong{
+color: red; /* Зеленый цвет текста */
+    margin-left: 20px; /* Отступ слева */
+    height:20px;
+  }
+
+
+  .name {
+  	color: blue; /* Зеленый цвет текста */
+    margin-left: 20px; /* Отступ слева */
+    height:20px;
+    }
+
+    .show {color: red;}
+
+    a:link {color:red;}
+
+  .project_name {
+
+    width: 499px;
+    min-height: 15px;
+  }
+
+    .submit {
+
+    position: absolute;
+    color: green;
+	left: 436px;
+	top: 11.5px;
+    
+    }
+
+    .pr_name {color:red;}
+

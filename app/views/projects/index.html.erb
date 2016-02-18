@@ -1,0 +1,38 @@
+
+
+<%= form_for :projects, url: projects_path do |f| %>
+  <table>
+    <tr>
+    <td>
+    <%= f.text_field :name, :class => "project_name", 
+    :placeholder => "Start typing here to create a task..."  %>
+  </td> 
+  <td>
+    <%= f.submit 'Add Task', :class => 'submit' %>
+  </td>
+</tr>
+<% end %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+ 
+  <% @project.each do |project| %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= link_to 'Show', project_path(project) %></td>
+      <td><%= link_to 'Edit', edit_project_path(project) %></td>
+      <td><%= link_to 'Destroy', project_path(project),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'My Blog', controller: 'projects' %>
+<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Back', projects_path %>
+
+
+
+

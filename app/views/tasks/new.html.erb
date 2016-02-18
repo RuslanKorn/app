@@ -1,0 +1,22 @@
+<%= form_for :tasks, url: tasks_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+ <p>
+    <%= f.label :project_id %><br>
+    <%= f.text_field :project_id %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'My Blog', controller: 'projects' %>
+
+<%= link_to 'Back', projects_path %>
