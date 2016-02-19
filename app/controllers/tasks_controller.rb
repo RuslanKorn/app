@@ -1,32 +1,29 @@
 class TasksController < ApplicationController
 
-
 	def index
-  		@tasks = Task.all
-  	end
+  		@task = Task.all
+  end
 
 	def show
   		@task = Task.find(params[:id])
-  	end
+  end
 	
 	def new	
 		@task = Task.new
 	end
 
 	def create
-  	@task = Task.new(task_params)
-
-  	if @task.save
-  	redirect_to root_url
-  else 
-    redirect_to root_url
+  	@task = Task.new(project_params)
+    if @task.save
+      flash[:success] = "Task Add!"
+      redirect_to tasks_url
   end
 end
 
 
 	private
   def task_params
-    params.require(:tasks).permit(:name, :status, :project_id)
+    params.require(:task).permit(:name, :status)
   end
 
 end

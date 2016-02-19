@@ -20,7 +20,8 @@ class ProjectsController < ApplicationController
   	@project = Project.new(project_params)
 
   	if @project.save
-  	redirect_to resources :tasks
+      flash[:success] = "Task Add!"
+  	redirect_to root_url
   else 
     redirect_to @project
   end
@@ -44,8 +45,9 @@ end
   end
 
   private
+
   def project_params
-    params.require(:projects).permit(:name, :text)
+    params.require(:project).permit(:name)
   end
 
 end
