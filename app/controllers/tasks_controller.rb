@@ -13,7 +13,7 @@ class TasksController < ApplicationController
 	end
 
 	def create
-  	@task = current_project.tasks.build(task_params)
+  	@task = Task.new(task_params)
     if @task.save
       flash[:success] = "Task Add!"
       redirect_to root_url
@@ -23,7 +23,7 @@ end
 
 	private
   def task_params
-    params.require(:task).permit(:name, :status)
+    params.require(:task).permit(:name, :status, :project_id)
   end
 
 end

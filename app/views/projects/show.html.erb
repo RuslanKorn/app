@@ -7,7 +7,7 @@
   
 </p>
 
-<%= form_for :tasks, url: tasks_path do |f| %>
+<%= form_for :task, url: tasks_path(@project) do |f| %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -15,6 +15,9 @@
   <p>
     <%= f.label :status %><br>
     <%= f.text_field :status %>
+  </p>
+<p>
+    <%= f.hidden_field :project_id, value: @project.id %>
   </p>
  
   <p>
